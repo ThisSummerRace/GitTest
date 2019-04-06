@@ -9,9 +9,7 @@
 int main(int argc,char *argv[])
 {
     int fd;
-    if(mkfifo(FIFO_PATH,0666) < 0 && errno != EEXIST)
-	{
-		perror("create fifo failed");
+    if(mkfifo(FIFO_PATH,0666) < 0 && errno != EEXIST
 		return -1;
 	}
 	else
