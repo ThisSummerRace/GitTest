@@ -9,7 +9,6 @@
 int main(int argc,char *argv[])
 {
     int fd;
-	char cont_w[] = "hello sundy!" ;
     if(mkfifo(FIFO_PATH,0666) < 0 && errno != EEXIST)
 	{
 		perror("create fifo failed");
